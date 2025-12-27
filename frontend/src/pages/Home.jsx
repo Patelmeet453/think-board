@@ -44,7 +44,9 @@ const Home = () => {
             </div>
           )}
 
-          {notes.length === 0 && !israteLimited && <NotesNotFound />}
+          {!loading && notes.length === 0 && !israteLimited && (
+            <NotesNotFound />
+          )}
 
           {notes.length > 0 && !israteLimited && (
             <div className="grid grid-col-12 sm:grid-cols-2 lg:grid-cols-3 gap-6">
